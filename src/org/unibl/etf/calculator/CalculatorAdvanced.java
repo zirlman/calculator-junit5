@@ -77,7 +77,7 @@ public class CalculatorAdvanced extends Calculator {
      * Calculates power of current value.
      *
      * @param power The exponent used to raise the currentValue.
-     * @throws NumberNotInAreaException Is thrown if currentValue is < 1
+     * @throws NumberNotInAreaException Is thrown if currentValue is {@literal <} 1
      */
     private void calculatePower(int currentValue, int power) throws NumberNotInAreaException {
         if (power == 0) {
@@ -93,7 +93,7 @@ public class CalculatorAdvanced extends Calculator {
      * @param action Character which specifies the action which will be applied. For values [0,9] the character is treated
      *               as the power, while for value '!' the factoriel of currentValue is calculated
      * @throws NumberNotInAreaException       Is thrown if currentValue is out of range [LOWER_BOUND_CA,UPPER_BOUND_CA]
-     * @throws NotSupportedOperationException
+     * @throws NotSupportedOperationException Is thrown if action is not supported
      */
     public void calculateAdvanced(char action) throws NumberNotInAreaException, NotSupportedOperationException {
         if ('!' == action) {
@@ -147,7 +147,7 @@ public class CalculatorAdvanced extends Calculator {
      * @param value Specifies which property of currentValue will be checked. Valid inputs are ['A','P']
      * @return Boolean Whether the currentValue has the specified characteristic
      * @throws NotSupportedOperationException Is thrown if value is not a valid input
-     * @throws NumberNotInAreaException       Is thrown if currentValue is < 1
+     * @throws NumberNotInAreaException       Is thrown if currentValue is {@literal <} 1
      */
     public Boolean hasCharacteristic(char value) throws NotSupportedOperationException, NumberNotInAreaException {
         if (getCurrentValue() < LOWER_BOUND_HC) {

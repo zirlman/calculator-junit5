@@ -1,23 +1,25 @@
 package org.unibl.etf.exceptions;
 
+/**
+ * Exception thrown when the divident is zero
+ *
+ * @author Dragan Zrilic
+ * @version 1.0.0
+ */
 public class DivisionByZeroException extends  Exception{
 
+    /**
+     * Default constructor.
+     */
     public DivisionByZeroException() {
     }
 
+    /**
+     * Constructor from a string.
+     *
+     * @param message String value that will be incorporated in the message for this exception.
+     */
     public DivisionByZeroException(String message) {
         super(message);
-    }
-
-    public DivisionByZeroException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public DivisionByZeroException(Throwable cause) {
-        super(cause);
-    }
-
-    public DivisionByZeroException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
     }
 }
